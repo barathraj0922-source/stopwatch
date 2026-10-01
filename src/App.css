@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 20px;
+}
+
+.stopwatch-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 45px 35px;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stopwatch-container h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #222;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #777;
+  font-size: 17px;
+}
+
+.timer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 65px;
+  font-weight: bold;
+  color: #222;
+  font-family: "Courier New", monospace;
+}
+
+.timer .colon {
+  color: #667eea;
+}
+
+.timer .milliseconds {
+  font-size: 45px;
+  color: #667eea;
+}
+
+.labels {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  margin-top: 5px;
+  color: #888;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.buttons button {
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.start-btn {
+  background: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pause-btn {
+  background: #ff9800;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.reset-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.status {
+  margin-top: 30px;
+  color: #777;
+  font-size: 16px;
+}
+
+.status strong {
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .stopwatch-container {
+    padding: 35px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .stopwatch-container h1 {
+    font-size: 32px;
+  }
+
+  .timer {
+    font-size: 40px;
+    gap: 3px;
+  }
+
+  .timer .milliseconds {
+    font-size: 28px;
+  }
+
+  .labels {
+    gap: 25px;
+    font-size: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
   }
 }
